@@ -7,8 +7,11 @@ const routes = require('./routes').router;
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+app.get('/', (req,res) => {
+  res.send('main page');
+})
 app.use('/insta', routes);
 
 app.listen(PORT, () => {
-  console.log('Express app listening on port', PORT);
+  console.log('Express app listening on port: '+ PORT);
 });
