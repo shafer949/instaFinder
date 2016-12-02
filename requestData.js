@@ -14,7 +14,7 @@ let requestData = (dataURL, isJson) => {
       else if (!err) {
         resolve(body);
       }else {
-        reject('Could not complete');
+        reject('Could not complete', err.message);
       }
     });
   });
